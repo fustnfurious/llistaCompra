@@ -1,0 +1,223 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: arial;
+}
+
+.header{
+  width: 100%;
+  background: #4488ee;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0px 10px 0px;
+  box-sizing: border-box;
+  color: white;
+}
+.header h1 {
+  display: block;
+  font-size: 20px;
+  text-align: center;
+  font-weight: normal;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.popUpPers{
+  width: calc(100% - 100px);
+  left:40px;
+  top:120px;
+  position: fixed;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: #d9d9ff;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.titolPopUp{
+  width: 100%;
+  font-size: 20px;
+  padding: 5px;
+}
+
+
+.popUpTancaBtn{
+  margin-top: 30px;
+  width: 80px;
+  height: 30px;
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 5px;
+  background: #4488ee;
+  text-align: center;
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+.popUpLlistaCont{
+  width: 100%;
+  font-size: 20px;
+  padding: 5px;
+  margin: 10px 0px 10px 0px;
+}
+.popUpLlistaCont>ul{
+  list-style: none;
+}
+.formulariContainer {
+  width: calc(100% - 20px);
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 10px;
+  position: absolute;
+  background: #ccddff;
+
+}
+.llistaProductesContainer{
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.titolLlistaProductesContainer {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.titolLlistaProductes{
+  display: block;
+  padding: 10px;
+  width: 165px;
+  border-radius: 10px;
+  background: #66bbff;
+  color: white;
+}
+
+.titolLlistaProductes p {
+  text-align: center;
+}
+
+.llistaProductesDiv {
+  background: #ddddff;
+  border-radius: 10px;
+}
+
+.llistaProductesDiv ul li {
+  text-decoration: none;
+  list-style-type: none;
+  display: block;
+  padding: 5px;
+  box-sizing: border-box;
+  border-bottom: 2px solid white;
+  text-align: center;
+}
+
+.botoCompraContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+}
+
+.botoCompra{
+  display: block;
+  width: 165px;
+  padding: 10px;
+  border-radius: 10px;
+  background: #66bbff;
+  color: white;
+}
+
+.esborraCompra{
+  background: #e85851;
+  display: block;
+  width: 120px;
+  padding: 7px;
+  border-radius:10px;
+  color: white;
+  margin-top: 5px;
+  font-size: 12px;
+  align-items: center;
+  text-align: center;
+}
+
+.boto{
+  width:100px;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 15px;
+  background: #4488ee;
+  color: white;
+  border: 0px;
+  box-shadow: none;
+  margin-right: 10px;
+
+}
+
+.botoCompra{
+  text-align: center;
+}
+
+.llistaCompresContainer {
+  width: 100%;
+  margin-top: 15px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background: red;
+}
+
+
+.titolCompres{
+  text-align: center;
+  width: 100%;
+  font-size: 20px;
+  background: #4488ee;
+  padding: 5px;
+  color: white;
+  box-sizing: border-box;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.llistaCompres {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.compra {
+  width: 100%;
+  box-sizing: border-box;
+  background: #ddddff;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid white;
+  justify-content: space-around;
+}
+
+.detallCompra {
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  width: 25%;
+  align-items: center;
+  text-align: center;
+}
+
+
+
+/*-------------------Versio PC-----------------------*/
+
+@media screen and (min-width: 854px) {
+/*fuck PC*/
+}

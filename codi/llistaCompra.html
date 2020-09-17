@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang=es dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Llista Compra</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="llistaCompra.css">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="llistaCompra.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <h1>Llista de la compra</h1>
+      </div>
+    </header>
+    <div class="main">
+      <div class="popUpPers">
+        <div id="titolPopUp" class="titolPopUp">
+          <!-- Les ultimes persones en comprar... -->
+
+        </div>
+        <div class="popUpLlistaCont">
+          <ul id="popUpLlista"class="popUpLlista">
+
+          </ul>
+        </div>
+        <div class="popUpTancaBtn">
+          <p>
+            Tanca
+          </p>
+        </div>
+      </div>
+      <div class="formulariContainer">
+        <form action="enviaCompra.php"class="forulariCompres" method="post">
+          Nom:<br>
+          <div id="formulariPers">
+            <!--php llegeix pers db-->
+          </div>
+          <br>
+          Què has comprat?<br><br>
+          <div id="formulariProd">
+            <!-- php llegeix prod db -->
+          </div>
+          <br>
+          <label for="prod">El que has comprat no és a la llista?</label><br>
+          <input type="text" id="nouProd" name="nouProd">
+          <br>
+          <br>
+          <input type="submit" value="Envia" class="boto" id="envia" onclick="enviaCompra()">
+          <button type="button" name="button" class="boto" id="cancela">Cancela</button>
+        </form>
+
+      </div>
+      <div class="botoCompraContainer">
+        <div class="botoCompra">
+          <p>Afegir compra</p>
+        </div>
+      </div>
+      <div class="llistaProductesContainer">
+        <div class="titolLlistaProductesContainer">
+          <div class="titolLlistaProductes">
+            <p>Mostra productes <span id="arrowDown">▼</span><span id="arrowUp">▲</span></p>
+          </div>
+        </div>
+        <div class="llistaProductesDiv">
+          <ul id="prodList">
+            <!-- llegir llista productes-->
+          </ul>
+        </div>
+      </div>
+      <div class="botoCompraContainer">
+        <div id="botoEsborra" class="esborraCompra">
+          <p>Esborra l'última compra</p>
+        </div>
+      </div>
+      <div class="llistaCompresContainer">
+        <div class="titolCompres">
+          <p>Últimes compres</p>
+        </div>
+        <div class="llistaCompres" id="ultCom">
+          <!-- inserir compres amb de la DB -->
+
+        </div>
+
+      </div>
+
+    </div>
+  </body>
+  <script>
+  $.get(
+    "ultimesCompres.php",
+    function(data) {
+      document.getElementById('ultCom').innerHTML = data;
+    }
+  );
+  $.get(
+    "opcionsCompraPers.php",
+    function(data) {
+      document.getElementById('formulariPers').innerHTML = data;
+    }
+  );
+  $.get(
+    "opcionsCompra.php",
+    function(data) {
+      document.getElementById('formulariProd').innerHTML = data;
+    }
+  );
+  $.get(
+    "llistaProductes.php",
+    function(data) {
+      document.getElementById('prodList').innerHTML = data;
+    }
+  );
+  </script>
+
+</html>
