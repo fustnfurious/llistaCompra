@@ -2,5 +2,5 @@ Aquesta aplicació web s'inicialitza de manera personalitzada amb les persones q
 
 Software necessari:
 - Apache Web Server
-- Mysql
+- Mysql i Mysqli
 - PHP 5 o posterior
